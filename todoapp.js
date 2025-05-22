@@ -11,6 +11,10 @@ function renderTasks() {
     const span = document.createElement("span");
     span.textContent = task;
 
+    span.addEventListener("click", () => {
+      span.classList.toggle("completed");
+    });
+
     const editBtn = document.createElement("button");
     editBtn.textContent = "✏️";
     editBtn.className = "edit";

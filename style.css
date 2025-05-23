@@ -1,22 +1,22 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #f5f5f5;
   display: flex;
   justify-content: center;
   padding-top: 50px;
+  background-color: rgb(186, 245, 98);
 }
-
 .container {
   background: white;
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 600px;
 }
 
 .input-group {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #taskInput {
@@ -49,10 +49,118 @@ li span {
 
 button.edit,
 button.delete {
-  background: #2bd80d;
+  background: aliceblue;
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+h1 {
+  text-align: center;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  z-index: -1;
+}
+
+.circle,
+.square {
+  position: absolute;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Harakatlar */
+@keyframes bounce-move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--x), var(--y));
+  }
+}
+
+/* Shakllar */
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #00e5ff;
+  animation-name: bounce-move;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ff4081;
+  animation-name: bounce-move;
+}
+
+/* Joylashuvlar + yo‘nalishlar */
+.delay1 {
+  top: 10%;
+  left: 15%;
+  --x: 20px;
+  --y: -30px;
+  animation-delay: 0s;
+}
+.delay2 {
+  top: 40%;
+  left: 60%;
+  --x: -25px;
+  --y: 25px;
+  animation-delay: 0.3s;
+}
+.delay3 {
+  top: 70%;
+  left: 30%;
+  --x: 15px;
+  --y: -20px;
+  animation-delay: 0.6s;
+}
+.delay4 {
+  top: 25%;
+  left: 80%;
+  --x: -30px;
+  --y: 30px;
+  animation-delay: 0.9s;
+}
+.delay5 {
+  top: 60%;
+  left: 50%;
+  --x: 25px;
+  --y: -15px;
+  animation-delay: 1.2s;
+}
+.delay6 {
+  top: 85%;
+  left: 10%;
+  --x: 20px;
+  --y: -25px;
+  animation-delay: 1.5s;
 }
